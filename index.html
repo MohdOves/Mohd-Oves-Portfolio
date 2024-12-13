@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    <title>Mohd Oves Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <nav>
+            <h1 class="logo">Mohammad oves</h1>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="theme-switch" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+        <div class="header-text">
+            
+            <h1 class="animate-right">Hi, I'm <span>Mohammad Oves</span><br>Web Developer</h1>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets/ovesimage.jpg" alt="Profile">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am Mohammad Oves, a second-year Computer Science and Engineering student at Rajasthan Technical University, with a passion for web development, Competitive Programming and Graphic Designing. I have experience in Python, C, C++, JavaScript, HTML, and CSS, Canva and have built projects like Netflix clones, interactive games (Tic-Tac-Toe, Rock Paper Scissors), Diwali wisher and a supercar showcase website. I am an active contributor to open-source projects.Currently, I continuously seek opportunities to enhance my skills</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills-tab">
+                        <ul>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Graphic Designing</span><br>Visual Design, Branding</li>
+                            <li><span>DSA</span><br>Data Structures, Algorithms, Problem Solving</li>
+                        </ul>
+                    </div>
+                   
+                    <div class="tab-contents" id="education-tab">
+                        <ul>
+                            <li><span>2023-present</span><br>B-Tech in CSE From Rajasthan Technical University</li>
+                            <li><span>2023</span><br>HSC from Pragati Public Sr. Sec School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="skills">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fab fa-html5"></i>
+                <h3>HTML</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-palette"></i>
+                <h3>Graphic Designing</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-code"></i>
+                <h3>C++</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-project-diagram"></i>
+                <h3>DSA</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-git-alt"></i>
+                <h3>Git</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-github"></i>
+                <h3>Github</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-container">
+            <div class="project">
+                <a href="https://showstreams.netlify.app" target="_blank">
+                <img src="assets/netflixClone.png" alt="Project 1"></a>
+                <div class="project-info">
+                    <h3>Netflix Clone</h3>
+                    <p>Netflix clone featuring a responsive grid layout, hover effects, and smooth animations, built entirely with HTML and CSS.</p>
+                </div>
+            </div>
+            <div class="project">
+                <a href="https://diwalidelights.netlify.app" target="_blank">
+                <img src="assets/diwaliDelight.png" alt="Project 2"></a>
+                <div class="project-info">
+                    <h3>Diwali Wisher</h3>
+                    <p>Diwali project featuring interactive animations like diyas and fireworks.</p>
+
+                </div>
+            </div>
+            <div class="project">
+                <a href="https://you-tube-clone-by-oves.netlify.app" target="_blank">
+                <img src="assets/youTubeClone.png" alt="Project 3"></a>
+                <div class="project-info">
+                    <h3>You Tube Clone</h3>
+                    <p>The project features a clean user interface with video thumbnails, navigation menus, and hover effects, mimicking the YouTube experience.</p>
+
+                </div>
+            </div>
+            <!-- Hidden projects -->
+            <div class="project">
+                <a href="https://global-rate-converter.netlify.app" target="_blank">
+                <img src="assets/currencyConverter.png" alt="Project 4"></a>
+                <div class="project-info">
+                    <h3>Currency Converter</h3>
+                    <p>It offers real-time currency exchange rates, enabling users to convert between multiple currencies with ease and accuracy.</p>
+
+                </div>
+            </div>
+            <div class="project hidden-project">
+                <a href="https://tic-tac-toe-by-oves.netlify.app" target="_blank">
+                <img src="assets/tictactoe.png" alt="Project 5"></a>
+                <div class="project-info">
+                    <h3>Tic-Tac-Toe</h3>
+                    <p>A game built with HTML, CSS, and JavaScriptwithreal-time gameplay.</p>
+
+                </div>
+            </div>
+            <div class="project hidden-project">
+                <a href="https://rock-paper-scissor-by-oves.netlify.app" target="_blank">
+                <img src="assets/rockPaperScissor.png" alt="Project 6"></a>
+                <div class="project-info">
+                    <h3>Rock Paper Scissor</h3>
+                    <p>The game offers a smooth, responsive interface with animated transitions, allowing users to play against the computer.</p>
+                </div>
+            </div>
+            <div class="project hidden-project">
+                <a href="https://super-car-showcase.netlify.app" target="_blank">
+                <img src="assets/superCarShowcase.png" alt="Project 5"></a>
+                <div class="project-info">
+                    <h3>Super Car Showcase</h3>
+                    <p>A website, designed using HTML and CSS, featuring high-quality images and hover effects for each car model.</p>
+
+                </div>
+            </div>
+            <div class="project hidden-project">
+                <a href="https://primemart-by-oves.netlify.app" target="_blank">
+                <img src="assets/amazonClone.png" alt="Project 5"></a>
+                <div class="project-info">
+                    <h3>Amazon Clone</h3>
+                    <p>A website built with HTML and CSS, featuring a clean layout, product categories, and a user-friendly interface.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="see-more-container">
+            <button id="seeMoreProjectsBtn" class="see-more-btn">See More</button>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <h1 class="sub-title">Contact Me</h1>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <span>mohammadovescontact@gmal.com</span>
+                </div>
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9983449941</span>
+                </div>
+                <div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kota, Rajasthan, India</span>
+                </div>
+                <div class="resume-btn-container">
+                    <a href="assets/My Resume.pdf" target="_blank" class="resume-btn">
+                        <i class="fas fa-file-pdf"></i>
+                        View Resume
+                    </a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/mohammad-oves-01b841306?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/MohdOves" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/MohdOves07?t=sNOKyTLy3mn7PRKhIyIAZQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/mohd_oves_?igsh=aXlqOWF3dnp4enA3" target="_blank"><i class="fab fa-instagram"></i></a>
+                    
+                </div>
+            </div>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/xyzyaabl" method="POST">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
