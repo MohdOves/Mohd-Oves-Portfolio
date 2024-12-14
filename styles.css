@@ -556,3 +556,15 @@ display: none;
         transition: right 0.3s ease;
     }
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+#header {
+    width: 100vw;
+    overflow-x: hidden;
+}
