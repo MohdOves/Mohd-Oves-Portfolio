@@ -66,3 +66,19 @@ function toggleProjects() {
 
 document.getElementById('seeMoreProjectsBtn').addEventListener('click', toggleProjects);
 
+document.getElementById('seeMoreProjectsBtn').addEventListener('click', toggleProjects);
+
+
+function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+}
+
+
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        const navList = document.querySelector('nav ul');
+        navList.classList.remove('show');
+    });
+});
+
