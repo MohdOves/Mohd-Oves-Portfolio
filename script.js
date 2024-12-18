@@ -31,11 +31,7 @@ function openTab(tabName) {
 }
 
 
-document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Message sent successfully!');
-    this.reset();
-});
+;
 
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
