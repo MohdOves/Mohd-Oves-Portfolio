@@ -1,5 +1,32 @@
+// Custom Cursor
+const cursor = document.querySelector('.cursor');
+const cursorFollower = document.querySelector('.cursor-follower');
 
-  function toggleTheme() {
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+    
+    setTimeout(() => {
+        cursorFollower.style.left = e.clientX + 'px';
+        cursorFollower.style.top = e.clientY + 'px';
+    }, 100);
+});
+
+// Add active class to cursor when hovering over interactive elements
+const interactiveElements = document.querySelectorAll('a, button, .project, .skill-box, .profile-image, .tab-links');
+interactiveElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        cursor.classList.add('active');
+        cursorFollower.classList.add('active');
+    });
+    
+    element.addEventListener('mouseleave', () => {
+        cursor.classList.remove('active');
+        cursorFollower.classList.remove('active');
+    });
+});
+
+function toggleTheme() {
     const body = document.body;
     const themeIcon = document.querySelector('.theme-switch i');
     

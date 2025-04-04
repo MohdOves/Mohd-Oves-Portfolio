@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
     <div id="header">
         <nav>
             <h1 class="logo">Mohammad oves</h1>
@@ -26,7 +28,9 @@
             </button>
         </nav>
         <div class="header-text">
-            
+            <div class="profile-image-container">
+                <img src="assets/oves.jpg" alt="Profile" class="profile-image">
+            </div>
             <h1 class="animate-right">Hi, I'm <span>Mohammad Oves</span><br>Web Developer</h1>
         </div>
     </div>
@@ -69,25 +73,40 @@
         <h1 class="sub-title">My Skills</h1>
         <div class="skills-container">
             <div class="skill-box">
-                <i class="fab fa-html5"></i>
-                <h3>HTML</h3>
+                <i class="fab fa-react"></i>
+                <h3>React</h3>
             </div>
             <div class="skill-box">
-                <i class="fab fa-css3-alt"></i>
-                <h3>CSS</h3>
+                <i class="fa-solid fa-server"></i>
+                <h3>Express</h3>
             </div>
             <div class="skill-box">
-                <i class="fab fa-js"></i>
-                <h3>JavaScript</h3>
+                <i class="fab fa-n"></i>
+                <h3>NextJS</h3>
             </div>
             <div class="skill-box">
-                <i class="fas fa-palette"></i>
-                <h3>Graphic Designing</h3>
+                <i class="fa-solid fa-database"></i>
+                <h3>MongoDB</h3>
             </div>
+            <div class="skill-box">
+                <i class="fab fa-node"></i>
+                <h3>NodeJS</h3>
+            </div>
+
+            <div class="skill-box">
+                <i class="fab fa-css3"></i>
+                <h3>TailwindCSS</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-aws"></i>
+                <h3>AWS</h3>
+            </div>
+            
             <div class="skill-box">
                 <i class="fab fa-python"></i>
                 <h3>Python</h3>
             </div>
+            
             <div class="skill-box">
                 <i class="fas fa-code"></i>
                 <h3>C++</h3>
@@ -104,6 +123,24 @@
                 <i class="fab fa-github"></i>
                 <h3>Github</h3>
             </div>
+            <div class="skill-box">
+                <i class="fab fa-html5"></i>
+                <h3>HTML</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-palette"></i>
+                <h3>Graphic Designing</h3>
+            </div>
+            
+            
         </div>
     </div>
 
@@ -112,20 +149,34 @@
         <h1 class="sub-title">My Projects</h1>
         <div class="projects-container">
             <div class="project">
-                <a href="https://showstreams.netlify.app" target="_blank">
-                <img src="assets/netflixClone.png" alt="Project 1"></a>
+                <img src="assets/fitfussion.png" alt="Project 1">
                 <div class="project-info">
-                    <h3>Netflix Clone</h3>
-                    <p>Netflix clone featuring a responsive grid layout, hover effects, and smooth animations, built entirely with HTML and CSS.</p>
+                    <h3>Fit Fussion</h3>
+                    <p>A modern MERN-based fitness platform featuring service listings, interactive UI, and Razorpay integration for smooth membership and class payments.</p>
+                    <div class="project-links">
+                        <a href="https://fit-fussions.vercel.app/" target="_blank" class="link-icon">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        <a href="https://github.com/MohdOves/FIT-FUSSION.git" target="_blank" class="github-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <!-- Repeat for other projects -->
             <div class="project">
-                <a href="https://diwalidelights.netlify.app" target="_blank">
-                <img src="assets/diwaliDelight.png" alt="Project 2"></a>
+                <img src="assets/donateease.png" alt="Project 2">
                 <div class="project-info">
-                    <h3>Diwali Wisher</h3>
-                    <p>Diwali project featuring interactive animations like diyas and fireworks.</p>
-
+                    <h3>Donate Ease</h3>
+                    <p>A full-stack MERN application designed to streamline the donation process with secure Razorpay payment integration and a user-friendly interface.</p>
+                    <div class="project-links">
+                        <a href="https://donateease.vercel.app/" target="_blank" class="link-icon">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        <a href="https://github.com/MohdOves/Donate-Ease.git" target="_blank" class="github-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="project">
@@ -134,26 +185,82 @@
                 <div class="project-info">
                     <h3>You Tube Clone</h3>
                     <p>The project features a clean user interface with video thumbnails, navigation menus, and hover effects, mimicking the YouTube experience.</p>
-
+                    <div class="project-links">
+                        <a href="https://you-tube-clone-by-oves.netlify.app" target="_blank" class="link-icon">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        <a href="https://github.com/MohdOves/You-Tube-Clone.git" target="_blank" class="github-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <!-- Hidden projects -->
             <div class="project">
                 <a href="https://global-rate-converter.netlify.app" target="_blank">
                 <img src="assets/currencyConverter.png" alt="Project 4"></a>
                 <div class="project-info">
                     <h3>Currency Converter</h3>
                     <p>It offers real-time currency exchange rates, enabling users to convert between multiple currencies with ease and accuracy.</p>
-
+                    <div class="project-links">
+                        <a href="https://global-rate-converter.netlify.app" target="_blank" class="link-icon">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        <a href="https://github.com/MohdOves/Currency-Converter.git" target="_blank" class="github-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <div class="project">
+                <a href="https://showstreams.netlify.app" target="_blank">
+                <img src="assets/netflixClone.png" alt="Project 1"></a>
+                <div class="project-info">
+                    <h3>Netflix Clone</h3>
+                    <p>Netflix clone featuring a responsive grid layout, hover effects, and smooth animations, built entirely with HTML and CSS.</p>
+                    <div class="project-links">
+                        <a href="https://showstreams.netlify.app" target="_blank" class="link-icon">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        <a href="https://github.com/MohdOves/Netflix-Clone.git" target="_blank" class="github-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <a href="https://diwalidelights.netlify.app" target="_blank">
+                <img src="assets/diwaliDelight.png" alt="Project 2"></a>
+                <div class="project-info">
+                    <h3>Diwali Wisher</h3>
+                    <p>Diwali project featuring interactive animations like diyas and fireworks.</p>
+                    <div class="project-links">
+                        <a href="https://diwalidelights.netlify.app" target="_blank" class="link-icon">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        <a href="https://github.com/MohdOves/Diwali-Delights.git" target="_blank" class="github-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+         
+            
             <div class="project hidden-project">
                 <a href="https://tic-tac-toe-by-oves.netlify.app" target="_blank">
                 <img src="assets/tictactoe.png" alt="Project 5"></a>
                 <div class="project-info">
                     <h3>Tic-Tac-Toe</h3>
                     <p>A game built with HTML, CSS, and JavaScriptwithreal-time gameplay.</p>
-
+                    <div class="project-links">
+                        <a href="https://tic-tac-toe-by-oves.netlify.app" target="_blank" class="link-icon">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        <a href="https://github.com/MohdOves/Tic-Tac-Toe.git" target="_blank" class="github-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="project hidden-project">
@@ -162,6 +269,14 @@
                 <div class="project-info">
                     <h3>Rock Paper Scissor</h3>
                     <p>The game offers a smooth, responsive interface with animated transitions, allowing users to play against the computer.</p>
+                    <div class="project-links">
+                        <a href="https://rock-paper-scissor-by-oves.netlify.app" target="_blank" class="link-icon">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        <a href="https://github.com/MohdOves/Rock-Paper-Scissor.git" target="_blank" class="github-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="project hidden-project">
@@ -170,7 +285,14 @@
                 <div class="project-info">
                     <h3>Super Car Showcase</h3>
                     <p>A website, designed using HTML and CSS, featuring high-quality images and hover effects for each car model.</p>
-
+                    <div class="project-links">
+                        <a href="https://super-car-showcase.netlify.app" target="_blank" class="link-icon">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        <a href="https://github.com/MohdOves/Super-Car-Showcase.git" target="_blank" class="github-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="project hidden-project">
@@ -179,7 +301,14 @@
                 <div class="project-info">
                     <h3>Amazon Clone</h3>
                     <p>A website built with HTML and CSS, featuring a clean layout, product categories, and a user-friendly interface.</p>
-
+                    <div class="project-links">
+                        <a href="https://primemart-by-oves.netlify.app" target="_blank" class="link-icon">
+                            <i class="fas fa-link"></i>
+                        </a>
+                        <a href="https://github.com/MohdOves/Amazon-Clone.git" target="_blank" class="github-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -206,7 +335,7 @@
                     <span>Kota, Rajasthan, India</span>
                 </div>
                 <div class="resume-btn-container">
-                    <a href="assets/My Resume.pdf" target="_blank" class="resume-btn">
+                    <a href="assets/MohdovesResume.pdf" target="_blank" class="resume-btn">
                         <i class="fas fa-file-pdf"></i>
                         View Resume
                     </a>
@@ -231,6 +360,18 @@
         </div>
     </div>
 
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Mohammad Oves. All Rights Reserved.</p>
+            <div class="footer-social-icons">
+                <a href="https://www.linkedin.com/in/mohammad-oves-01b841306" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/MohdOves" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/MohdOves07" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/mohd_oves_" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
