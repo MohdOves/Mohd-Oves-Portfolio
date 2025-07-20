@@ -1,16 +1,37 @@
-// Custom Cursor
+// Smoky Cursor Effect
 const cursor = document.querySelector('.cursor');
 const cursorFollower = document.querySelector('.cursor-follower');
+let mouseX = 0;
+let mouseY = 0;
+let cursorX = 0;
+let cursorY = 0;
+let followerX = 0;
+let followerY = 0;
+let speed = 0.3; // Increased speed from 0.1 to 0.3
 
+// Smooth cursor movement
+function animate() {
+    // Faster movement for main cursor
+    cursorX += (mouseX - cursorX) * speed;
+    cursorY += (mouseY - cursorY) * speed;
+    cursor.style.transform = `translate(${mouseX - cursor.offsetWidth/2}px, ${mouseY - cursor.offsetHeight/2}px)`;
+
+    // Slightly delayed follower for smoke effect
+    followerX += (mouseX - followerX) * (speed * 0.8); // Increased from 0.5 to 0.8
+    followerY += (mouseY - followerY) * (speed * 0.8);
+    cursorFollower.style.transform = `translate(${followerX - cursorFollower.offsetWidth/2}px, ${followerY - cursorFollower.offsetHeight/2}px)`;
+
+    requestAnimationFrame(animate);
+}
+
+// Update mouse position
 document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    
-    setTimeout(() => {
-        cursorFollower.style.left = e.clientX + 'px';
-        cursorFollower.style.top = e.clientY + 'px';
-    }, 100);
+    mouseX = e.clientX;
+    mouseY = e.clientY;
 });
+
+
+animate();
 
 // Add active class to cursor when hovering over interactive elements
 const interactiveElements = document.querySelectorAll('a, button, .project, .skill-box, .profile-image, .tab-links');
@@ -30,14 +51,19 @@ function toggleTheme() {
     const body = document.body;
     const themeIcon = document.querySelector('.theme-switch i');
     
-    if (body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode');
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-    } else {
-        body.classList.add('dark-mode');
+    // Force a repaint to ensure gradient transitions work
+    document.documentElement.style.display = 'none';
+    document.documentElement.offsetHeight;
+    document.documentElement.style.display = '';
+    
+    if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
         themeIcon.classList.remove('fa-moon');
         themeIcon.classList.add('fa-sun');
+    } else {
+        body.classList.add('light-mode');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
     }
 }
 
