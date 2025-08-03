@@ -1,10 +1,10 @@
-# 🚀 Mohd Oves - Personal Portfolio
+#  Mohd Oves - Personal Portfolio
 
 A modern, responsive personal portfolio website showcasing my skills, projects, and experience as a Computer Science Engineering student and web developer.
 
 ## 🌟 Live Demo
 
-**[🔗 Visit My Portfolio](https://mohd-oves-portfolio.netlify.app/)**
+**[🔗 Visit My Portfolio](https://mdoves.me)**
 
 ## 📋 About
 
