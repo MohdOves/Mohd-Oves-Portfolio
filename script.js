@@ -22,10 +22,21 @@ function toggleTheme() {
     const savedTheme = localStorage.getItem('theme');
     const themeIcon = document.querySelector('.theme-toggle i');
     
-    if (savedTheme === 'dark') {
+    // Default to dark mode if no preference is saved
+    if (savedTheme === 'light') {
+      // Light mode
+      document.documentElement.removeAttribute('data-theme');
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+    } else {
+      // Dark mode (default)
       document.documentElement.setAttribute('data-theme', 'dark');
       themeIcon.classList.remove('fa-moon');
       themeIcon.classList.add('fa-sun');
+      // Save preference if not set
+      if (!savedTheme) {
+        localStorage.setItem('theme', 'dark');
+      }
     }
   }
   
