@@ -1,761 +1,588 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>"
-    />
-    <title>Mohd Oves Portfolio</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-W59XM87T");
-    </script>
-    <!-- End Google Tag Manager -->
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-W59XM87T"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    <div id="header">
-      <nav>
-        <div class="nav-container">
-          <h1 class="logo">Mohammad oves</h1>
-          <i class="fas fa-bars" onclick="toggleMenu()"></i>
-          <ul>
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <button class="theme-switch" onclick="toggleTheme()">
-            <i class="fas fa-sun"></i>
-          </button>
-        </div>
-      </nav>
-      <div class="header-text">
-        <div class="profile-image-container">
-          <img src="assets/oves2.png" alt="Profile" class="profile-image" />
-        </div>
-        <h1 class="animate-right">
-          Hi, I'm <span>Mohammad Oves</span><br />Web Developer
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>" />
+  <title>Mohd Oves Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-W59XM87T");
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W59XM87T" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
+  <nav id="nav">
+    <div class="nav-container">
+      <a href="#header" class="logo">MO</a>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <header id="header">
+    <div class="header-content">
+      <div class="header-left">
+        <div class="badge">Available for opportunities</div>
+        <h1 class="header-title">
+          <span id="typewriter"></span>
+          <span class="cursor-blink">_</span>
         </h1>
+        <p class="header-subtitle">
+          Computer Science Student · Full Stack Developer · AI/ML Enthusiast
+        </p>
+        <div class="header-stats">
+         
+          <div class="stat">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">Top 19%</span>
+            <span class="stat-label">LeetCode Rank</span>
+          </div>
+        </div>
+        <div class="header-cta">
+          <a href="#projects" class="btn btn-primary">View Work</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="profile-wrapper">
+          <img src="assets/oves2.png" alt="Mohammad Oves" class="profile-image" />
+          <div class="profile-decoration"></div>
+        </div>
       </div>
     </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <div class="arrow">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
 
-    <div id="about">
-      <div class="container">
-        <div class="row">
-          <div class="about-col-1">
-            <img src="assets/ovesimage.jpg" alt="Profile" />
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="assets/ovesimage.jpg" alt="Mohammad Oves" />
+        </div>
+        <div class="about-content">
+          <p class="about-text">
+            I'm a third-year Computer Science and Engineering student at
+            Rajasthan Technical University with a passion for building
+            innovative solutions. My journey in tech spans full-stack web
+            development, AI/LLM, and competitive programming.
+          </p>
+          <p class="about-text">
+            With a strong foundation in Data Structures and Algorithms, I've
+            solved 300+ problems on LeetCode and actively contribute to
+            open-source projects. I'm constantly exploring new technologies
+            and challenging myself to grow as a developer.
+          </p>
+
+          <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'experience')">
+              Experience
+            </button>
+            <button class="tab-btn" onclick="openTab(event, 'education')">
+              Education
+            </button>
+            <button class="tab-btn" onclick="openTab(event, 'achievements')">
+              Achievements
+            </button>
           </div>
-          <div class="about-col-2">
-            <h1 class="sub-title gradient-text">About Me</h1>
-            <p>
-              I am Mohammad Oves, a third-year Computer Science and Engineering
-              student at Rajasthan Technical University, an aspiring developer
-              currently focused on Artificial Intelligence and Machine Learning.
 
-            </p>
-            <p> I have a solid foundation in Data Structures and Algorithms, regularly participate in competitive programming, and actively contribute to open-source projects. I am always eager to learn new technologies and take on challenging opportunities to grow as a developer and problem-solver.</p>
-
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="openTab('skills')">
-                Skills
+          <div id="experience" class="tab-content active">
+            <div class="timeline-item">
+              <h4>Full Stack Development</h4>
+              <p>
+                Building scalable web applications using MERN stack,
+                Next.js, and modern development practices
               </p>
-              <p class="tab-links" onclick="openTab('education')">Education</p>
-              <p class="tab-links" onclick="openTab('achievement')">Achievement</p>
             </div>
-            <div class="tab-contents active-tab" id="skills-tab">
-              <ul>
-                <li>
-                  <span>DSA</span><br />Data Structures, Algorithms, Problem
-                  Solving
-                </li>
-                <li>
-                  <span>AI, ML & Deep Learning</span><br />Machine Learning &
-                  Data Science
-                </li>
-                <li></li>
-                <li>
-                  <span>Web Development</span><br />Full Stack Web Development
-                </li>
-                
-              </ul>
+            <div class="timeline-item">
+              <h4>AI/LLM</h4>
+              <p>
+                Built and deployed LLM-powered RAG systems using LangChain and LlamaIndex for efficient, context-aware
+                question answering over custom data.
+              </p>
             </div>
+            <div class="timeline-item">
+              <h4>Problem Solving</h4>
+              <p>
+                Strong foundation in DSA with 300+ LeetCode problems solved
+                and competitive programming experience
+              </p>
+            </div>
+          </div>
 
-            <div class="tab-contents" id="education-tab">
-              <ul>
-                <li>
-                  <span>2023-present</span><br />B-Tech in CSE From Rajasthan
-                  Technical University
-                </li>
-                <li>
-                  <span>2023</span><br />HSC from Pragati Public Sr. Sec School
-                </li>
-              </ul>
+          <div id="education" class="tab-content">
+            <div class="timeline-item">
+              <h4>B.Tech in Computer Science</h4>
+              <span class="timeline-date">2023 - Present</span>
+              <p>Rajasthan Technical University</p>
             </div>
+            <div class="timeline-item">
+              <h4>Higher Secondary Certificate</h4>
+              <span class="timeline-date">2023</span>
+              <p>Pragati Public Sr. Sec School</p>
+            </div>
+          </div>
 
-            <div class="tab-contents" id="achievement-tab">
-              <ul>
-                <li>
-                  <span>Competitive Programming</span><br />LeetCode: 300+ problems solved · Contest Rating 1627 · Top 19% globally. 
-                </li>
-                <li>
-                  <span>Open Source</span><br />Hacktoberfest achiever with 7 badges and verified open-source contributions.
-                </li>
-                <li>
-                  <span>Hackathons</span><br />Participated in Adobe, AryaVerse, and Bolt hackathons, collaborating on innovative tech solutions.
-                </li>
-                
-              </ul>
+          <div id="achievements" class="tab-content">
+            <div class="timeline-item">
+              <h4>Competitive Programming</h4>
+              <p>
+                LeetCode: 300+ problems · Contest Rating 1627 · Top 19%
+                globally
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h4>Open Source</h4>
+              <p>
+                Hacktoberfest achiever with 7 badges and verified
+                contributions
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h4>Hackathons</h4>
+              <p>
+                Participated in Adobe, AryaVerse, and Bolt hackathons
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div id="skills">
-      <h1 class="sub-title gradient-text">My Skills</h1>
-      
-      <!-- First Row - Left to Right -->
-      <div class="skills-wrapper">
-        <div class="skills-container skills-row-1">
-          <div class="skill-box">
-            <i class="fab fa-react"></i>
-            <h3>React</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fa-solid fa-server"></i>
-            <h3>Express</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-n"></i>
-            <h3>NextJS</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fa-solid fa-database"></i>
-            <h3>MongoDB</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-node"></i>
-            <h3>NodeJS</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fas fa-file-code"></i>
-            <h3>Typescript</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-aws"></i>
-            <h3>AWS</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-python"></i>
-            <h3>Python</h3>
-          </div>
-          
-          <!-- Duplicate for seamless loop -->
-          <div class="skill-box">
-            <i class="fab fa-react"></i>
-            <h3>React</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fa-solid fa-server"></i>
-            <h3>Express</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-n"></i>
-            <h3>NextJS</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fa-solid fa-database"></i>
-            <h3>Databases</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-node"></i>
-            <h3>NodeJS</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fas fa-file-code"></i>
-            <h3>Typescript</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-aws"></i>
-            <h3>AWS</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-python"></i>
-            <h3>Python</h3>
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-code"></i> Languages</h3>
+          <div class="skill-list">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
           </div>
         </div>
-      </div>
-      
-      <!-- Second Row - Right to Left -->
-      <div class="skills-wrapper">
-        <div class="skills-container skills-row-2">
-          <div class="skill-box">
-            <i class="fas fa-code"></i>
-            <h3>C++</h3>
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-palette"></i> Frontend</h3>
+          <div class="skill-list">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">HTML</span>
           </div>
-          <div class="skill-box">
-            <i class="fas fa-project-diagram"></i>
-            <h3>DSA</h3>
+        </div>
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-server"></i> Backend</h3>
+          <div class="skill-list">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">REST APIs</span>
           </div>
-          <div class="skill-box">
-            <i class="fab fa-git-alt"></i>
-            <h3>Git</h3>
+        </div>
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-database"></i> Databases</h3>
+          <div class="skill-list">
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">NeonDB</span>
+            <span class="skill-tag">Supabase</span>
+            <span class="skill-tag">SQL</span>
           </div>
-          <div class="skill-box">
-            <i class="fab fa-github"></i>
-            <h3>Github</h3>
+        </div>
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-brain"></i> AI/LLM Tools</h3>
+          <div class="skill-list">
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">LlamaIndex</span>
+
           </div>
-          <div class="skill-box">
-            <i class="fas fa-network-wired"></i>
-            <h3>n8n Automation</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-docker"></i>
-            <h3>Docker</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-js"></i>
-            <h3>JavaScript</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fas fa-robot"></i>
-            <h3>Machine learning</h3>
-          </div>
-          
-          <!-- Duplicate for seamless loop -->
-          <div class="skill-box">
-            <i class="fas fa-code"></i>
-            <h3>C++</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fas fa-project-diagram"></i>
-            <h3>DSA</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-git-alt"></i>
-            <h3>Git</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-github"></i>
-            <h3>Github</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fas fa-network-wired"></i>
-            <h3>n8n Automation</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-docker"></i>
-            <h3>Docker</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fab fa-js"></i>
-            <h3>JavaScript</h3>
-          </div>
-          <div class="skill-box">
-            <i class="fas fa-robot"></i>
-            <h3>Machine learning</h3>
+        </div>
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-tools"></i> Tools & Others</h3>
+          <div class="skill-list">
+            <span class="skill-tag">Git/GitHub</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">n8n</span>
+
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Projects Section -->
-    
-    <div id="projects">
-      <h1 class="sub-title gradient-text">My Projects</h1>
-      <div class="projects-container">
-        <div class="project">
-          <img src="assets/mediai.png" alt="Project 1" />
-          <div class="project-info">
-            <h3>Medi Ai</h3>
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="assets/mediai.png" alt="Medi AI" />
+          </div>
+          <div class="project-content">
+            <span class="project-badge">Featured</span>
+            <h3>Medi AI</h3>
             <p>
-              Built a voice-enabled AI medical assistant, Medi AI, that allows users to interact through speech, receive health insights, reminders, and AI-generated responses powered by NLP and real-time processing.
+              Voice-enabled AI medical assistant with NLP capabilities for
+              health insights, reminders, and real-time processing
             </p>
+            <div class="project-tech">
+              <span>AI/ML</span>
+              <span>NLP</span>
+              <span>Voice Recognition</span>
+            </div>
             <div class="project-links">
-              <a
-                href="https://aimedi.tech"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
+              <a href="https://aimedi.tech" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
               </a>
-              <a
-                href="https://github.com/MohdOves/MediAI"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
+              <a href="https://github.com/MohdOves/MediAI" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> Code
               </a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project">
-          <img src="assets/imagineai.png" alt="Project 1" />
-          <div class="project-info">
+        <article class="project-card">
+          <div class="project-image">
+            <img src="assets/imagineai.png" alt="Imagine AI" />
+          </div>
+          <div class="project-content">
             <h3>Imagine AI</h3>
             <p>
-              Imagine AI is an automated image generation platform built with n8n, where users submit prompts and receive AI-generated images via email instantly.
+              Automated image generation platform with n8n workflow,
+              generating AI images from prompts via email
             </p>
+            <div class="project-tech">
+              <span>n8n</span>
+              <span>AI</span>
+              <span>Automation</span>
+            </div>
             <div class="project-links">
-              <a
-                href="https://imagineai-oves.vercel.app/"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
+              <a href="https://imagineai-oves.vercel.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live
               </a>
-              <a
-                href="https://github.com/MohdOves/ImagineAI"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
+              <a href="https://github.com/MohdOves/ImagineAI" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> Code
               </a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project">
-          <img src="assets/chatty.png" alt="Project 1" />
-          <div class="project-info">
+        <article class="project-card">
+          <div class="project-image">
+            <img src="assets/chatty.png" alt="Chatty" />
+          </div>
+          <div class="project-content">
             <h3>Chatty</h3>
             <p>
-              A real-time chat application built using Socket.io that enables instant bi-directional messaging between users with live typing indicators and user presence tracking.
+              Real-time chat application with Socket.io for instant messaging,
+              typing indicators, and presence tracking
             </p>
+            <div class="project-tech">
+              <span>Socket.io</span>
+              <span>Node.js</span>
+              <span>Real-time</span>
+            </div>
             <div class="project-links">
-              <a
-                href="https://chatcall.onrender.com/"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
+              <a href="https://chatcall.onrender.com/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live
               </a>
-              <a
-                href="https://github.com/MohdOves/Chatty"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
+              <a href="https://github.com/MohdOves/Chatty" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> Code
               </a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project">
-          <img src="assets/fitfussion.png" alt="Project 1" />
-          <div class="project-info">
+        <article class="project-card">
+          <div class="project-image">
+            <img src="assets/fitfussion.png" alt="Fit Fussion" />
+          </div>
+          <div class="project-content">
             <h3>Fit Fussion</h3>
             <p>
-              A modern MERN-based fitness platform featuring service listings,
-              interactive UI, and Razorpay integration for smooth membership and
-              class payments.
+              MERN fitness platform with service listings, interactive UI, and
+              Razorpay payment integration
             </p>
+            <div class="project-tech">
+              <span>MERN</span>
+              <span>Razorpay</span>
+              <span>Full Stack</span>
+            </div>
             <div class="project-links">
-              <a
-                href="https://fit-fussions.vercel.app/"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
+              <a href="https://fit-fussions.vercel.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live
               </a>
-              <a
-                href="https://github.com/MohdOves/FIT-FUSSION.git"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
+              <a href="https://github.com/MohdOves/FIT-FUSSION.git" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> Code
               </a>
             </div>
           </div>
-        </div>
-        
-        <div class="project">
-          <img src="assets/donateease.png" alt="Project 2" />
-          <div class="project-info">
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="assets/donateease.png" alt="Donate Ease" />
+          </div>
+          <div class="project-content">
             <h3>Donate Ease</h3>
             <p>
-              A full-stack MERN application designed to streamline the donation
-              process with secure Razorpay payment integration and a
-              user-friendly interface.
+              Full-stack donation platform streamlining the donation process
+              with secure Razorpay integration
             </p>
+            <div class="project-tech">
+              <span>MERN</span>
+              <span>Payment Gateway</span>
+            </div>
             <div class="project-links">
-              <a
-                href="https://donateease.vercel.app/"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
+              <a href="https://donateease.vercel.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live
               </a>
-              <a
-                href="https://github.com/MohdOves/Donate-Ease.git"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
+              <a href="https://github.com/MohdOves/Donate-Ease.git" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> Code
               </a>
             </div>
           </div>
-        </div>
-        <div class="project">
-          <a href="https://you-tube-clone-by-oves.netlify.app" target="_blank">
-            <img src="assets/youTubeClone.png" alt="Project 3"
-          /></a>
-          <div class="project-info">
-            <h3>You Tube Clone</h3>
-            <p>
-              The project features a clean user interface with video thumbnails,
-              navigation menus, and hover effects, mimicking the YouTube
-              experience.
-            </p>
-            <div class="project-links">
-              <a
-                href="https://you-tube-clone-by-oves.netlify.app"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
-              </a>
-              <a
-                href="https://github.com/MohdOves/You-Tube-Clone.git"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <a href="https://global-rate-converter.netlify.app" target="_blank">
-            <img src="assets/currencyConverter.png" alt="Project 4"
-          /></a>
-          <div class="project-info">
-            <h3>Currency Converter</h3>
-            <p>
-              It offers real-time currency exchange rates, enabling users to
-              convert between multiple currencies with ease and accuracy.
-            </p>
-            <div class="project-links">
-              <a
-                href="https://global-rate-converter.netlify.app"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
-              </a>
-              <a
-                href="https://github.com/MohdOves/Currency-Converter.git"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <a href="https://showstreams.netlify.app" target="_blank">
-            <img src="assets/netflixClone.png" alt="Project 1"
-          /></a>
-          <div class="project-info">
-            <h3>Netflix Clone</h3>
-            <p>
-              Netflix clone featuring a responsive grid layout, hover effects,
-              and smooth animations, built entirely with HTML and CSS.
-            </p>
-            <div class="project-links">
-              <a
-                href="https://showstreams.netlify.app"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
-              </a>
-              <a
-                href="https://github.com/MohdOves/Netflix-Clone.git"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+        </article>
 
-        <div class="project">
-          <a href="https://diwalidelights.netlify.app" target="_blank">
-            <img src="assets/diwaliDelight.png" alt="Project 2"
-          /></a>
-          <div class="project-info">
-            <h3>Diwali Wisher</h3>
+        <article class="project-card">
+          <div class="project-image">
+            <img src="assets/youTubeClone.png" alt="YouTube Clone" />
+          </div>
+          <div class="project-content">
+            <h3>YouTube Clone</h3>
             <p>
-              Diwali project featuring interactive animations like diyas and
-              fireworks.
+              Clean interface with video thumbnails, navigation, and hover
+              effects mimicking YouTube
             </p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
             <div class="project-links">
-              <a
-                href="https://diwalidelights.netlify.app"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
+              <a href="https://you-tube-clone-by-oves.netlify.app" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live
               </a>
-              <a
-                href="https://github.com/MohdOves/Diwali-Delights.git"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
+              <a href="https://github.com/MohdOves/You-Tube-Clone.git" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> Code
               </a>
             </div>
           </div>
-        </div>
+        </article>
+      </div>
 
-        <div class="project hidden-project">
-          <a href="https://tic-tac-toe-by-oves.netlify.app" target="_blank">
-            <img src="assets/tictactoe.png" alt="Project 5"
-          /></a>
-          <div class="project-info">
-            <h3>Tic-Tac-Toe</h3>
-            <p>
-              A game built with HTML, CSS, and JavaScriptwithreal-time gameplay.
-            </p>
-            <div class="project-links">
-              <a
-                href="https://tic-tac-toe-by-oves.netlify.app"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
-              </a>
-              <a
-                href="https://github.com/MohdOves/Tic-Tac-Toe.git"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
-              </a>
+      <div class="more-projects" id="moreProjects" style="display: none">
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image">
+              <img src="assets/currencyConverter.png" alt="Currency Converter" />
             </div>
-          </div>
-        </div>
-        <div class="project hidden-project">
-          <a
-            href="https://rock-paper-scissor-by-oves.netlify.app"
-            target="_blank"
-          >
-            <img src="assets/rockPaperScissor.png" alt="Project 6"
-          /></a>
-          <div class="project-info">
-            <h3>Rock Paper Scissor</h3>
-            <p>
-              The game offers a smooth, responsive interface with animated
-              transitions, allowing users to play against the computer.
-            </p>
-            <div class="project-links">
-              <a
-                href="https://rock-paper-scissor-by-oves.netlify.app"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
-              </a>
-              <a
-                href="https://github.com/MohdOves/Rock-Paper-Scissor.git"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
-              </a>
+            <div class="project-content">
+              <h3>Currency Converter</h3>
+              <p>Real-time currency exchange with multiple currencies</p>
+              <div class="project-tech">
+                <span>API</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://global-rate-converter.netlify.app" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Live
+                </a>
+                <a href="https://github.com/MohdOves/Currency-Converter.git" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="project hidden-project">
-          <a href="https://super-car-showcase.netlify.app" target="_blank">
-            <img src="assets/superCarShowcase.png" alt="Project 5"
-          /></a>
-          <div class="project-info">
-            <h3>Super Car Showcase</h3>
-            <p>
-              A website, designed using HTML and CSS, featuring high-quality
-              images and hover effects for each car model.
-            </p>
-            <div class="project-links">
-              <a
-                href="https://super-car-showcase.netlify.app"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
-              </a>
-              <a
-                href="https://github.com/MohdOves/Super-Car-Showcase.git"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
-              </a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="assets/netflixClone.png" alt="Netflix Clone" />
             </div>
-          </div>
-        </div>
-        <div class="project hidden-project">
-          <a href="https://primemart-by-oves.netlify.app" target="_blank">
-            <img src="assets/amazonClone.png" alt="Project 5"
-          /></a>
-          <div class="project-info">
-            <h3>Amazon Clone</h3>
-            <p>
-              A website built with HTML and CSS, featuring a clean layout,
-              product categories, and a user-friendly interface.
-            </p>
-            <div class="project-links">
-              <a
-                href="https://primemart-by-oves.netlify.app"
-                target="_blank"
-                class="link-icon"
-              >
-                <i class="fas fa-link"></i>
-              </a>
-              <a
-                href="https://github.com/MohdOves/Amazon-Clone.git"
-                target="_blank"
-                class="github-icon"
-              >
-                <i class="fab fa-github"></i>
-              </a>
+            <div class="project-content">
+              <h3>Netflix Clone</h3>
+              <p>Responsive grid layout with hover effects and animations</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://showstreams.netlify.app" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Live
+                </a>
+                <a href="https://github.com/MohdOves/Netflix-Clone.git" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
             </div>
-          </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="assets/tictactoe.png" alt="Tic-Tac-Toe" />
+            </div>
+            <div class="project-content">
+              <h3>Tic-Tac-Toe</h3>
+              <p>Interactive game with real-time gameplay</p>
+              <div class="project-tech">
+                <span>JavaScript</span>
+                <span>Game Dev</span>
+              </div>
+              <div class="project-links">
+                <a href="https://tic-tac-toe-by-oves.netlify.app" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Live
+                </a>
+                <a href="https://github.com/MohdOves/Tic-Tac-Toe.git" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
-      <div class="see-more-container">
-        <button id="seeMoreProjectsBtn" class="see-more-btn">See More</button>
+
+      <div class="text-center">
+        <button class="btn btn-secondary" onclick="toggleProjects()">
+          <span id="projectsBtnText">Show More Projects</span>
+        </button>
       </div>
     </div>
+  </section>
 
-    <!-- Contact Section -->
-    <div id="contact">
-      <h1 class="sub-title gradient-text">Contact Me</h1>
-      <div class="contact-container">
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-grid">
         <div class="contact-info">
-          <div>
-            <i class="fas fa-envelope"></i>
-            <span>mohammadovescontact@gmail.com</span>
+          <p class="contact-intro">
+            I'm always open to discussing new opportunities, collaborations,
+            or just having a chat about technology. Feel free to reach out!
+          </p>
+          <div class="contact-methods">
+            <a href="mailto:mohammadovescontact@gmail.com" class="contact-method">
+              <i class="fas fa-envelope"></i>
+              <span>mohammadovescontact@gmail.com</span>
+            </a>
+            <a href="tel:+919983449941" class="contact-method">
+              <i class="fas fa-phone"></i>
+              <span>+91 9983449941</span>
+            </a>
+            <div class="contact-method">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Kota, Rajasthan, India</span>
+            </div>
           </div>
-          <div>
-            <i class="fas fa-phone"></i>
-            <span>+91 9983449941</span>
-          </div>
-          <div>
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Kota, Rajasthan, India</span>
-          </div>
-          <div class="resume-btn-container">
-            <a
-              href="assets/MohdovesResume.pdf"
-              target="_blank"
-              class="resume-btn"
-            >
-              <i class="fas fa-file-pdf"></i>
-              View Resume
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/mohammad-oves-01b841306" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/MohdOves" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://x.com/MohdOves07" target="_blank" aria-label="LeetCode profile">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/mohd_oves_" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
             </a>
           </div>
-          <div class="social-icons">
-            <a
-              href="https://www.linkedin.com/in/mohammad-oves-01b841306?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a href="https://github.com/MohdOves" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://x.com/MohdOves07?t=sNOKyTLy3mn7PRKhIyIAZQ&s=09"
-              target="_blank"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/mohd_oves_?igsh=aXlqOWF3dnp4enA3"
-              target="_blank"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </div>
+          <a href="assets/MohdovesResume.pdf" target="_blank" class="btn btn-primary resume-btn">
+            <i class="fas fa-file-pdf"></i> View Resume
+          </a>
         </div>
-        <div class="contact-form">
-          <form action="https://formspree.io/f/xyzyaabl" method="POST">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
             <input type="text" name="name" placeholder="Your Name" required />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              required
-            ></textarea>
-            <button type="submit">Send Message</button>
-          </form>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Mohammad Oves. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/mohammad-oves-01b841306" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/MohdOves" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://x.com/MohdOves07" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
         </div>
       </div>
     </div>
+  </footer>
 
-    <!-- Footer Section -->
-    <footer id="footer">
-      <div class="footer-container">
-        <p>&copy; 2025 Mohammad Oves. All Rights Reserved.</p>
-        <div class="footer-social-icons">
-          <a
-            href="https://www.linkedin.com/in/mohammad-oves-01b841306"
-            target="_blank"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <a href="https://github.com/MohdOves" target="_blank"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a href="https://x.com/MohdOves07" target="_blank"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a href="https://www.instagram.com/mohd_oves_" target="_blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </div>
-      </div>
-    </footer>
+  <script src="script.js"></script>
+</body>
 
-    <script src="script.js"></script>
-  </body>
 </html>

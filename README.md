@@ -25,10 +25,22 @@ This is my personal portfolio website built with pure HTML, CSS, and JavaScript.
 
 ## 🛠️ Tech Stack
 
+### Frontend
 - **HTML5** - Semantic markup and structure
 - **CSS3** - Styling, animations, and responsive design
 - **JavaScript (ES6+)** - Interactive functionality and dynamic content
-- **Netlify** - Hosting and deployment platform
+
+### Backend
+- **Node.js** - Runtime environment
+- **Express.js** - Web server framework
+- **Nodemailer** - Email sending functionality
+- **dotenv** - Environment variable management
+- **CORS** - Cross-origin resource sharing
+- **Express Rate Limit** - Request rate limiting for spam protection
+
+### Deployment
+- **Netlify/Vercel** - Frontend hosting
+- **Heroku/VPS** - Backend hosting (optional)
 
 ## 🎯 Sections Overview
 
@@ -62,18 +74,23 @@ This is my personal portfolio website built with pure HTML, CSS, and JavaScript.
 - And more...
 
 ### 📞 Contact
-- Email contact form
+- **Email contact form** with Nodemailer backend
+- Automatic email notifications
+- Auto-reply to senders
+- Rate-limited to prevent spam
+- Beautiful HTML email templates
 - Social media links
 - Professional networking options
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Web browser
+- **Node.js** (v14 or higher) - [Download here](https://nodejs.org/)
+- Web browser (Chrome, Firefox, etc.)
 - Text editor (VS Code recommended)
-- Basic knowledge of HTML, CSS, and JavaScript
+- Gmail account (or other email service)
 
-### Local Development
+### Installation & Setup
 
 1. **Clone the repository**
    ```bash
@@ -81,47 +98,66 @@ This is my personal portfolio website built with pure HTML, CSS, and JavaScript.
    cd Mohd-Oves-Portfolio
    ```
 
-2. **Open the project**
+2. **Install dependencies**
    ```bash
-   # Open with VS Code
-   code .
-   
-   # Or open index.html directly in your browser
-   open index.html
+   npm install
    ```
 
-3. **Development Server (Optional)**
+3. **Set up environment variables**
    ```bash
-   # Using Python
-   python -m http.server 8000
+   # Copy the example file
+   cp .env.example .env
    
-   # Using Node.js (if you have live-server installed)
-   npx live-server
+   # Edit .env and add your credentials
+   # See SETUP.md for detailed instructions
    ```
 
-4. **Access the website**
-   - Direct: Open `index.html` in your browser
-   - Server: `http://localhost:8000`
+4. **Configure email settings**
+   
+   Open `.env` and add:
+   ```env
+   EMAIL_SERVICE=gmail
+   EMAIL_USER=your-email@gmail.com
+   EMAIL_PASS=your-app-password
+   PORT=3000
+   ```
+   
+   📌 **For Gmail App Password setup, see [SETUP.md](SETUP.md)**
+
+5. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+6. **Access the website**
+   Open your browser and go to `http://localhost:3000`
+
+### Production Build
+
+```bash
+npm start
+```
+
+For detailed setup instructions, deployment guides, and troubleshooting, see **[SETUP.md](SETUP.md)**
 
 ## 📁 Project Structure
 
 ```
 Mohd-Oves-Portfolio/
-├── index.html              # Main HTML file
-├── css/
-│   ├── style.css          # Main stylesheet
-│   └── responsive.css     # Responsive design styles
-├── js/
-│   ├── script.js          # Main JavaScript file
-│   └── animations.js      # Animation scripts
-├── images/
-│   ├── profile/           # Profile pictures
-│   ├── projects/          # Project screenshots
-│   └── icons/             # Various icons
-├── assets/
-│   ├── resume/            # Resume/CV files
-│   └── documents/         # Other documents
-└── README.md
+├── server.js              # Express server with nodemailer
+├── index.html             # Main HTML file
+├── script.js              # Frontend JavaScript with form handling
+├── styles.css             # Main stylesheet
+├── package.json           # Dependencies and scripts
+├── .env                   # Environment variables (not in Git)
+├── .env.example           # Example environment file
+├── .gitignore             # Git ignore rules
+├── SETUP.md               # Detailed setup instructions
+├── assets/                # Images and resources
+│   ├── profile photos
+│   ├── project screenshots
+│   └── resume PDF
+└── README.md              # This file
 ```
 
 ## 🎨 Customization
@@ -198,12 +234,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🎯 Future Enhancements
 
-- [ ] Dark/Light theme toggle
+- [x] Dark/Light theme toggle ✅
+- [x] Custom email backend with Nodemailer ✅
 - [ ] Blog section integration
 - [ ] Advanced animations
 - [ ] Multi-language support
 - [ ] Performance optimizations
 - [ ] SEO improvements
+- [ ] Email templates customization
+- [ ] Database integration for message storage
 
 
 ## 🙏 Acknowledgments
